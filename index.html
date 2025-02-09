@@ -1,1 +1,22 @@
-<h1>Hallo !</h1>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öffne die App</title>
+    <script>
+        function openDeepLink() {
+            // Versuche, die App mit dem Deeplink zu öffnen
+            window.location.href = "appname://deeplink-pfad"; // Ersetze mit deinem Deeplink
+
+            // Fallback nach 2 Sekunden: Falls die App nicht geöffnet wurde, zur Website weiterleiten
+            setTimeout(function() {
+                window.location.href = "https://deine-webseite.de";
+            }, 2000);
+        }
+    </script>
+</head>
+<body onload="openDeepLink()">
+    <h2>Weiterleitung...</h2>
+    <p>Falls nichts passiert, <a href="appname://deeplink-pfad">hier klicken</a> oder öffne <a href="https://deine-webseite.de">diese Seite</a>.</p>
+</body>
+</html>
