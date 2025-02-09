@@ -1,12 +1,14 @@
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-        function openDeepLink() {
-            // 1️⃣ Deeplink für eine App öffnen (z. B. WhatsApp, YouTube, Spotify)
-window.location.href = "x-web-search://?https://gooogle.de";
+<script>
+    function openInBrowser() {
+        var url = "https://https://taplink.cc/aivana";
+        var newTab = window.open(url, "_blank");
+
+        // Falls das Popup blockiert wird, leite stattdessen direkt weiter
+        if (!newTab || newTab.closed || typeof newTab.closed == "undefined") {
+            window.location.href = url;
         }
-    </script>
-</head>
-</html>
+    }
+</script>
+<body onload="openInBrowser()">
+    <p>Falls nichts passiert, <a href="https://google.de" target="_blank">hier klicken</a>.</p>
+</body>
