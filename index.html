@@ -2,21 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weiterleitung...</title>
     <script>
         function openDeepLink() {
             // 1️⃣ Deeplink für eine App öffnen (z. B. WhatsApp, YouTube, Spotify)
 window.location.href = "x-web-search://?https://gooogle.de";
-            
-            // 2️⃣ Falls der Deeplink nicht funktioniert, nach 2 Sekunden zur Webseite weiterleiten
-            setTimeout(function() {
-window.location.href = "x-web-search://?https://gooogle.de";
-            }, 2000);
         }
     </script>
 </head>
-<body onload="openDeepLink()">
-    <h2>Weiterleitung...</h2>
-    <p>Falls nichts passiert, <a href="appname://deeplink-pfad">hier klicken</a> oder <a href="https://deine-webseite.de">diese Seite besuchen</a>.</p>
-</body>
 </html>
