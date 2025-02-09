@@ -2,13 +2,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Öffne die App</title>
+    <title>Im Browser öffnen...</title>
     <script>
-    function openInBrowser() {
-        var url = "https://google.de";
-        window.open(url, "_blank");
-    }
-</script>
-<a href="#" onclick="openInBrowser()">Im Browser öffnen</a>
+        function openInBrowser() {
+            var url = "https://google.de"; // Deine Zielseite
+            var newTab = window.open(url, "_blank");
+            
+            // Falls das Blockieren von Pop-ups verhindert, leite stattdessen direkt weiter
+            if (!newTab || newTab.closed || typeof newTab.closed == "undefined") {
+                window.location.href = url;
+            }
+        }
+    </script>
 </head>
+<body onload="openInBrowser()">
+    <h2>Weiterleitung...</h2>
+    <p>Falls nichts passiert, <a href="https:///google.de" target="_blank">hier klicken</a>.</p>
+</body>
 </html>
