@@ -6,11 +6,11 @@
     <script>
         function openDeepLink() {
             // Versuche, die App mit dem Deeplink zu öffnen
-            window.location.href = "appname://deeplink-pfad"; // Ersetze mit deinem Deeplink
+            window.location.href = "browser://google.de"; // Ersetze mit deinem Deeplink
 
             // Fallback nach 2 Sekunden: Falls die App nicht geöffnet wurde, zur Website weiterleiten
             setTimeout(function() {
-                window.location.href = "https://deine-webseite.de";
+                window.location.href = "https://google.de";
             }, 2000);
         }
     </script>
