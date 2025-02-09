@@ -4,16 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Öffne die App</title>
     <script>
-        function openDeepLink() {
-            // Versuche, die App mit dem Deeplink zu öffnen
-            window.location.href = "browser://google.de"; // Ersetze mit deinem Deeplink
-
-            // Fallback nach 2 Sekunden: Falls die App nicht geöffnet wurde, zur Website weiterleiten
-            setTimeout(function() {
-                window.location.href = "https://google.de";
-            }, 2000);
-        }
-    </script>
+    function openInBrowser() {
+        var url = "https://google.de";
+        window.open(url, "_blank");
+    }
+</script>
+<a href="#" onclick="openInBrowser()">Im Browser öffnen</a>
 </head>
 <body onload="openDeepLink()">
     <h2>Weiterleitung...</h2>
